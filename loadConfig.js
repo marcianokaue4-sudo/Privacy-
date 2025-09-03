@@ -21,17 +21,17 @@ function getConfig() {
     },
     
     model: {
-      name: process.env.MODEL_NAME || 'Stella Beghini',
-      handle: process.env.MODEL_HANDLE || '@stellabeghini',
-      bio: process.env.MODEL_BIO || 'sou bonita, sou gostosa jogo bola e danço, sou o cara mais legal do mundo'
+      name: process.env.MODEL_NAME || 'Mariana Poletto',
+      handle: process.env.MODEL_HANDLE || '@oi.marianapoletto',
+      bio: process.env.MODEL_BIO || 'Aqui você vai me ver de um jeitinho exclusivo que você nem imagina (toda peladinha!!! Sem censura!) A bunda mais gostosa que você já viu, tudo rosinha 🩷 18 aninhos... muita PUTARIA, vídeos e fotos sozinha, acompanhada, com amigas, falando putaria pra você .. dançando peladinha !!! São mais de 756 mídias!! TUDO SEM CENSURA, mostrando TU-DO, do melhor ângulo pra você se sentir aqui comigo! Chat diretamente comigo, eu mesma respondo e adoro conhecer vc mais de perto 😍 e se a química rolar, pq não? ❤️ Só falta você! ❤️‍🔥 Espero que goste!!!'
     },
     
     plans: {
       monthly: {
         buttonId: process.env.PLAN_MONTHLY_BUTTON_ID || 'btn-1-mes',
         label: process.env.PLAN_MONTHLY_LABEL || '1 mês',
-        priceLabel: process.env.PLAN_MONTHLY_PRICE_LABEL || 'R$ 19,98',
-        price: parseFloat(process.env.PLAN_MONTHLY_PRICE) || 19.98,
+        priceLabel: process.env.PLAN_MONTHLY_PRICE_LABEL || 'R$ 19,99',
+        price: parseFloat(process.env.PLAN_MONTHLY_PRICE) || 19.99,
         description: process.env.PLAN_MONTHLY_DESCRIPTION || 'Assinatura mensal'
       },
       quarterly: {
@@ -50,7 +50,7 @@ function getConfig() {
       }
     },
     
-    redirectUrl: process.env.REDIRECT_URL || 'https://stellabeghini.com/compra-aprovada/'
+    redirectUrl: process.env.REDIRECT_URL || 'https://privacymarianapoletto.site/Compra-aprovada/'
   };
 }
 
