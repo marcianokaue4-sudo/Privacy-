@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Presente da Stella — Oferta Exclusiva</title>
+<link rel="stylesheet" href="/css/payment-modal.css">
+<style>
+  :root{--grad1:#ff7a6b;--grad2:#ffb487;--bg:#f6f7fb;--txt:#1f1f1f}
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden}
+
+  .topbar{position:fixed;inset:0 0 auto 0;height:56px;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:center;z-index:30}
+  .topbar img{height:32px;object-fit:contain}
+
+  .backdrop{position:fixed;inset:0;background:rgba(10,10,10,.72);display:flex;align-items:center;justify-content:center;z-index:50}
+  .modal{width:min(720px,92vw);background:#fff;border-radius:18px;padding:28px;box-shadow:0 18px 40px rgba(0,0,0,.25);text-align:center}
+  .modal h1{margin:8px 0 12px;font-size:22px;font-weight:700}
+  .modal p{color:#565656;margin:0 0 16px}
+  .btn{display:inline-block;margin-top:10px;padding:14px 22px;border-radius:999px;font-weight:800;text-decoration:none;color:#fff;background:linear-gradient(45deg,var(--grad1),var(--grad2));box-shadow:0 10px 24px rgba(255,122,107,.35);cursor:pointer;border:0}
+
+  .content{opacity:0;pointer-events:none}
+  .wrap{max-width:880px;margin:88px auto 28px;padding:0 20px}
+  .card{background:#fff;border-radius:18px;box-shadow:0 12px 28px rgba(0,0,0,.06);padding:32px;text-align:center}
+
+  .headline{font-size:26px;margin:6px 0 12px}
+  .price{display:flex;gap:12px;justify-content:center;align-items:baseline;margin:14px 0}
+  .old{color:#9a9a9a;text-decoration:line-through;font-size:20px}
+  .new{color:#ff5a4f;font-weight:900;font-size:40px}
+
+  .timer-title{color:#6b6b6b;margin:16px 0 6px}
+  .timer{display:flex;justify-content:center;gap:14px;margin-bottom:20px}
+  .box{background:#ff7a6b;color:#fff;border-radius:12px;padding:12px 16px;min-width:84px}
+  .box b{display:block;font-size:20px}
+  .box span{display:block;font-size:11px;font-weight:700;opacity:.9}
+
+  .benefits{max-width:620px;margin:0 auto 18px;line-height:1.5;color:#2a2a2a}
+  .benefits p{margin:10px 0;font-size:16px}
+
+  .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+  .btn-ghost{background:#fff;border:2px solid #e6e6e6;color:#3b3b3b;box-shadow:none}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <img src="/images/logo.png" alt="Privacy">
+</div>
+
+<!-- Gate -->
+<div class="backdrop" id="gate">
+  <div class="modal">
+    <h1>Você foi o homem sortudo nº <span id="rank">111</span> a assinar no Privacy</h1>
+    <p>e, por isso, ganhou este brinde exclusivo da <b>Stella Beghini</b>.</p>
+    <button class="btn" id="revelar">Revelar meu presente</button>
+  </div>
+</div>
+
+<!-- Página -->
+<div class="content" id="page">
+  <div class="wrap">
+    <div class="card">
+      <h2 class="headline">Seu Presente Exclusivo</h2>
+      <div class="price">
+        <span class="old">R$ 397,00</span>
+        <span class="new">R$ 27,00</span>
+      </div>
+
+      <p class="timer-title">Esta oferta expira em:</p>
+      <div class="timer">
+        <div class="box"><b id="h">00</b><span>HORAS</span></div>
+        <div class="box"><b id="m">05</b><span>MIN</span></div>
+        <div class="box"><b id="s">00</b><span>SEG</span></div>
+      </div>
+
+      <!-- Texto limpo de benefícios -->
+      <div class="benefits">
+        <p>✔️ Um vídeo <b>100% personalizado</b>, Stella fala e geme o <b>seu nome</b>.</p>
+        <p>✔️ Você pede o que deseja: fantasias, fetiches ou roleplay.</p>
+        <p>✔️ Entrega <b>sigilosa via WhatsApp</b>, com assinatura inclusa.</p>
+        <p>✔️ Presente exclusivo por ser o <b>sortudo nº <span id="rankNum">111</span></b>.</p>
+      </div>
+
+      <div class="cta">
+        <button id="btn-video-personalizado" class="btn" type="button">GARANTIR MEU VÍDEO PERSONALIZADO AGORA</button>
+        <a class="btn btn-ghost" href="/">Vou deixar passar agora</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/sweetalert.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/syncpay-integration.js"></script>
+<script src="/js/payment-modal.js"></script>
+<script src="/js/pix-popup-alternative.js"></script>
+<script src="/js/universal-payment-integration.js"></script>
+<script>
+(function(){
+  const n=Math.floor(Math.random()*90)+80; // 80-170 aleatório
+  document.getElementById('rank').textContent=n;
+  document.getElementById('rankNum').textContent=n;
+})();
+document.getElementById('revelar').onclick=function(){
+  document.getElementById('gate').style.display='none';
+  const pg=document.getElementById('page');
+  pg.style.opacity='1';pg.style.pointerEvents='auto';
+  document.body.style.overflow='auto';
+};
+let t=5*60;const h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
+setInterval(()=>{if(t<=0)return;t--;h.textContent=String(Math.floor(t/3600)).padStart(2,'0');m.textContent=String(Math.floor((t%3600)/60)).padStart(2,'0');s.textContent=String(t%60).padStart(2,'0');},1000);
+
+document.getElementById('btn-video-personalizado').addEventListener('click', async function(){
+  if (!window.universalPayment) {
+    alert('Serviço de pagamento indisponível.');
+    return;
+  }
+  try {
+    if (window.universalPayment.showLoading) {
+      window.universalPayment.showLoading();
+    }
+    const transaction = await window.universalPayment.createPixTransaction(27, 'Vídeo Personalizado');
+    if (transaction && transaction.pix_code) {
+      window.universalPayment.showPixModal(transaction);
+    } else {
+      alert('PIX gerado com sucesso!');
+    }
+  } catch (err) {
+    console.error('Erro ao gerar PIX:', err);
+    alert('Erro ao gerar PIX: ' + err.message);
+  } finally {
+    if (typeof swal !== 'undefined') {
+      try { swal.close(); } catch(e){}
+    }
+    const loading=document.getElementById('nativeLoading');
+    if (loading) loading.remove();
+  }
+});
+</script>
+</body>
+</html>

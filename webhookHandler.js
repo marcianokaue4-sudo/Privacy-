@@ -161,7 +161,6 @@ class WebhookHandler {
                 console.log('✅ Transação completada - pagamento confirmado');
                 // Implementar lógica para transação completada
                 // Ex: liberar produto, enviar confirmação, etc.
-                
                 break;
             
             case 'failed':
@@ -259,7 +258,6 @@ class WebhookHandler {
         console.log('  - POST /webhooks/syncpay/cashout/update');
         console.log('  - POST /webhooks/syncpay (genérico)');
     }
-
 }
 
 module.exports = WebhookHandler;

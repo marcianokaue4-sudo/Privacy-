@@ -39,8 +39,8 @@ class PaymentModal {
                         <img src="images/perfil.jpg" alt="Perfil">
                     </div>
                     <div class="payment-profile-info">
-                        <h3 class="model-name" data-config="model.name">Mariana Poletto</h3>
-                        <p class="model-handle" data-config="model.handle">@marianapoletto.oi</p>
+                        <h3 class="model-name" data-config="model.name">Stella Beghini</h3>
+                        <p class="model-handle" data-config="model.handle">@stella_beghini</p>
                     </div>
                 </div>
             </div>
@@ -378,7 +378,6 @@ class PaymentModal {
                         console.log('✅ Pagamento confirmado! Iniciando redirecionamento...');
                         this.updateStatus('success', 'Pagamento confirmado! ✓');
                         this.stopStatusCheck();
-
 
                         // Fechar modal e redirecionar após 3 segundos
                         setTimeout(() => {

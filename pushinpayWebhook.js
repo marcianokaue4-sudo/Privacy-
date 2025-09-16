@@ -80,13 +80,12 @@ class PushinPayWebhookHandler {
     /**
      * Processar status 'created'
      */
-    async handleCreatedStatus(webhookData) {
+    handleCreatedStatus(webhookData) {
         console.log('✅ PIX criado:', {
             id: webhookData.id,
             value: webhookData.value,
             qr_code: webhookData.qr_code ? 'Presente' : 'Ausente'
         });
-
 
         // Aqui você pode:
         // - Atualizar banco de dados local
@@ -98,7 +97,7 @@ class PushinPayWebhookHandler {
     /**
      * Processar status 'paid'
      */
-    async handlePaidStatus(webhookData) {
+    handlePaidStatus(webhookData) {
         console.log('💰 PIX pago:', {
             id: webhookData.id,
             value: webhookData.value,
@@ -106,7 +105,6 @@ class PushinPayWebhookHandler {
             payer_document: webhookData.payer_national_registration,
             end_to_end_id: webhookData.end_to_end_id
         });
-
 
         // Aqui você pode:
         // - Confirmar pagamento no sistema

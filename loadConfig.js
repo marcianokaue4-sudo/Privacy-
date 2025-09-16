@@ -21,9 +21,9 @@ function getConfig() {
     },
     
     model: {
-      name: process.env.MODEL_NAME || 'Mariana Poletto',
-      handle: process.env.MODEL_HANDLE ? (process.env.MODEL_HANDLE.startsWith('@') ? process.env.MODEL_HANDLE : `@${process.env.MODEL_HANDLE}`) : '@marianapoletto.oi',
-      bio: process.env.MODEL_BIO || 'Com apenas 18 aninhos fui coroada como a bucetinha mais rosa e o cuzinho mais apertado do 🇧🇷. Aqui você assiste minhas surubas, leitadas violentas, sexo anal sem dó e vídeos quentes que não mostro em lugar nenhum. 😈🔥'
+      name: process.env.MODEL_NAME || 'Stella Beghini',
+      handle: process.env.MODEL_HANDLE ? (process.env.MODEL_HANDLE.startsWith('@') ? process.env.MODEL_HANDLE : `@${process.env.MODEL_HANDLE}`) : '@stellabeghini',
+      bio: process.env.MODEL_BIO || 'Com apenas 21 aninhos fui coroada como a bucetinha mais rosa e o cuzinho mais apertado do 🇧🇷. Aqui você assiste minhas surubas, leitadas violentas, sexo anal sem dó e vídeos quentes que não mostro em lugar nenhum. 😈🔥'
     },
     
     plans: {
@@ -50,7 +50,7 @@ function getConfig() {
       }
     },
     
-    redirectUrl: process.env.REDIRECT_URL || 'https://marianapoletto.com/assinatura-premiada/'
+    redirectUrl: process.env.REDIRECT_URL || 'https://stellabeghini.com/oferta-premiada/'
   };
 }
 

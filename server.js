@@ -21,7 +21,6 @@ const paymentController = getPaymentController();
 // Manter compatibilidade com o gateway antigo
 const paymentGateway = new PaymentGateway(config.ACTIVE_GATEWAY);
 
-
 // Configurar CORS
 app.use(cors({
     origin: '*',
@@ -651,11 +650,6 @@ app.get('/links', (req, res) => {
     res.sendFile(path.join(__dirname, 'links', 'index.html'));
 });
 
-// Rota para a página de anuncio
-app.get('/anuncio', (req, res) => {
-    res.sendFile(path.join(__dirname, 'anuncio', 'index.html'));
-});
-
 // Rota para a página de compra aprovada
 app.get('/compra-aprovada', (req, res) => {
     res.sendFile(path.join(__dirname, 'compra-aprovada', 'index.html'));
@@ -664,10 +658,6 @@ app.get('/compra-aprovada', (req, res) => {
 // Rota para a página de redirecionamento
 app.get('/redirect', (req, res) => {
     res.sendFile(path.join(__dirname, 'redirect', 'index.html'));
-});
-
-app.get('/redirect2', (req, res) => {
-    res.sendFile(path.join(__dirname, 'redirect2', 'index.html'));
 });
 
 // Rota para a página de redirecionamento privacy
@@ -796,7 +786,6 @@ app.use((req, res, next) => {
 
 // Servir arquivos estáticos de cada diretório (APÓS o debug)
 app.use('/links', express.static(path.join(__dirname, 'links')));
-app.use('/anuncio', express.static(path.join(__dirname, 'anuncio')));
 app.use('/compra-aprovada', express.static(path.join(__dirname, 'compra-aprovada')));
 app.use('/redirect-privacy', express.static(path.join(__dirname, 'redirect-privacy')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -811,8 +800,6 @@ app.use('/assets', express.static(path.join(__dirname, 'funil_completo/assets'))
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use('/images', express.static(path.join(__dirname, 'links/images')));
 app.use('/icons', express.static(path.join(__dirname, 'links/icons')));
-app.use('/anuncio/images', express.static(path.join(__dirname, 'anuncio/images')));
-app.use('/anuncio/icons', express.static(path.join(__dirname, 'anuncio/icons')));
 app.use('/compra-aprovada/images', express.static(path.join(__dirname, 'compra-aprovada/images')));
 
 // Middleware específico para redirecionamento com debug
@@ -821,12 +808,6 @@ app.use('/redirect', (req, res, next) => {
     console.log(`🔄 [Redirect] URL completa: ${req.url}`);
     next();
 }, express.static(path.join(__dirname, 'redirect')));
-
-app.use('/redirect2', (req, res, next) => {
-    console.log(`🔄 [Redirect2] Requisição para: ${req.path}`);
-    console.log(`🔄 [Redirect2] URL completa: ${req.url}`);
-    next();
-}, express.static(path.join(__dirname, 'redirect2')));
 
 // Middleware específico para imagens de redirecionamento
 app.use('/redirect/images', (req, res, next) => {
@@ -837,7 +818,6 @@ app.use('/redirect/images', (req, res, next) => {
 }, express.static(path.join(__dirname, 'redirect/images')));
 
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 // ============================
 // MIDDLEWARE DE TRATAMENTO DE ERROS
@@ -902,7 +882,6 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`🎁 Oferta Premiada: http://localhost:${PORT}/oferta-premiada`);
     console.log(`🏆 Assinatura Premiada: http://localhost:${PORT}/assinatura-premiada`);
     console.log(`🔄 Redirecionamento: http://localhost:${PORT}/redirect`);
-    console.log(`🔄 Redirecionamento 2: http://localhost:${PORT}/redirect2`);
     console.log(`\n🎯 FUNIL COMPLETO:`);
     console.log(`   📈 Upsells: http://localhost:${PORT}/up1 | /up2 | /up3`);
     console.log(`   📉 Downsells: http://localhost:${PORT}/back1 | /back2 | /back3`);
