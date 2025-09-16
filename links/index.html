@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noarchive,noimageindex,nosnippet">
+  <title>Mariana Poletto</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/protect.css">
+
+  <!-- Scripts UTMify -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async defer
+  ></script>
+
+  <script>
+    window.pixelId = "68c82ef8a21cee3362d76eee";
+    var a = document.createElement("script");
+    a.async = true; a.defer = true;
+    a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+    document.head.appendChild(a);
+  </script>
+
+  <!-- UTM Store Module -->
+  <script src="../public/js/tracking/utm-store.js"></script>
+  
+  <!-- Event ID Generator -->
+  <script src="../public/js/tracking/id.js"></script>
+  
+  <!-- Meta Pixel Module -->
+  <script src="../public/js/tracking/meta-pixel.js"></script>
+  
+  <!-- Telegram Deep Link Module -->
+  <script src="../public/js/tracking/tg.js"></script>
+
+  <style>
+    :root{--accent:#4CAF50;--txt:#fff;--muted:rgba(255,255,255,.85);--glass-blur:12px;--glass-sat:135%;--glass-shadow:0 10px 26px rgba(0,0,0,.30);--btn-h:64px;--btn-radius:9999px;--icon-box:68px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',sans-serif;min-height:100vh;background:url('images/fundo.jpg') center/cover fixed no-repeat;display:flex;flex-direction:column;align-items:center;padding:24px 16px 84px;color:var(--txt);text-align:center}
+    .stack{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center;gap:16px}
+    .avatar-wrap{width:132px;height:132px;margin-top:6px;border-radius:50%;padding:3px;background:linear-gradient(135deg,#3fd46d,#117a2a);box-shadow:0 12px 28px rgba(0,0,0,.35)}
+    .avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#000}
+    .name{font-weight:700;font-size:26px;letter-spacing:.3px;text-shadow:0 2px 6px rgba(0,0,0,.4);margin-top:6px}
+
+    /* ONLINE + LOCALIZAÇÃO NA MESMA LINHA */
+    .row-status{display:flex;justify-content:center;align-items:center;gap:8px;color:var(--muted);font-weight:600;font-size:15px}
+    .row-status .dot{color:var(--accent);font-size:20px;line-height:1;position:relative;top:-1px;animation:blink 1s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+    .sep{font-size:14px;opacity:.7}
+    .loc{display:inline-flex;align-items:center;gap:4px}
+    .loc svg{width:15px;height:15px;vertical-align:middle;opacity:.9}
+
+    /* BOTÕES */
+    .button{position:relative;display:grid;grid-template-columns:var(--icon-box) 1fr var(--icon-box);align-items:center;height:var(--btn-h);width:100%;max-width:400px;border-radius:var(--btn-radius);padding:0 12px 0 10px;margin:6px auto 0;text-decoration:none;font-weight:600;font-size:16px;color:#fff;backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-sat));-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-sat));box-shadow:var(--glass-shadow);overflow:hidden}
+    .button::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,.10) 0%,rgba(255,255,255,.04) 35%,rgba(0,0,0,.18) 100%);mix-blend-mode:soft-light;pointer-events:none}
+    .button .icon-wrap{grid-column:1/2;display:flex;align-items:center;justify-content:flex-start;padding-left:8px}
+    .icon{width:42px;height:42px;display:block;border-radius:50%}
+    .button .label{grid-column:2/3;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .button .spacer{grid-column:3/4;visibility:hidden}
+    .button--privacy{background:linear-gradient(135deg,rgba(246,141,61,.45) 0%,rgba(240,100,20,.38) 30%,rgba(180,60,10,.30) 70%,rgba(25,12,6,.25) 100%);border:1px solid rgba(246,141,61,.45)}
+    .button--privacy:hover{filter:brightness(1.08)}
+    .button--telegram{background:linear-gradient(135deg,rgba(0,136,204,.45) 0%,rgba(0,110,180,.36) 35%,rgba(0,70,130,.28) 70%,rgba(10,20,40,.22) 100%);border:1px solid rgba(0,136,204,.45)}
+    .button--telegram:hover{filter:brightness(1.08)}
+
+    .footer{position:fixed;left:0;right:0;bottom:12px;text-align:center;font-size:12px;color:var(--muted);padding:0 12px;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+    @media (max-width:420px){.name{font-size:24px}.button{max-width:92vw}}
+  </style>
+
+
+</head>
+<body>
+  <div class="stack">
+    <div class="avatar-wrap"><img class="avatar" src="images/stella.jpg" alt="Mariana Poletto"></div>
+    <div class="name">Mariana Poletto</div>
+
+    <!-- ONLINE + LOCALIZAÇÃO COM BOLINHA SEPARANDO -->
+    <div class="row-status">
+      <span class="dot">●</span>
+      <span>ONLINE AGORA</span>
+      <span class="sep">•</span>
+      <span class="loc">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        <span id="city">Monte Sião</span>
+      </span>
+    </div>
+
+    <!-- ===== Botões ===== -->
+    <a id="btn-privacy" class="button button--privacy" href="/privacy" rel="noopener noreferrer">
+      <span class="icon-wrap"><img class="icon" src="icons/icon-3.png" alt="Privacy"></span>
+      <span class="label">Privacy</span><span class="spacer">.</span>
+    </a>
+
+    <a id="btn-telegram" class="button button--telegram" href="/redirect" rel="noopener noreferrer">
+      <span class="icon-wrap"><img class="icon" src="icons/icon-2.png" alt="Telegram"></span>
+      <span class="label">Telegram Grátis 🔥</span><span class="spacer">.</span>
+    </a>
+  </div>
+
+  <div class="footer">Todos os direitos reservados a Mariana Poletto. Qualquer vazamento de imagem é crime — Código Penal (Decreto-Lei 2.848/1940).</div>
+
+  <script src="../assets/protect.js"></script>
+  
+  
+  <script>
+    const cityEl=document.getElementById("city");
+    async function detectCity(){
+      const tries=[
+        {url:"https://ipinfo.io/json",parse:d=>d.city},
+        {url:"https://ipapi.co/json/",parse:d=>!d.error?d.city:null},
+        {url:"https://geolocation-db.com/json/",parse:d=>d.city&&"Not found"!==d.city?d.city:null}
+      ];
+      for(const t of tries){
+        try{
+          const r=await fetch(t.url,{headers:{Accept:"application/json"}});
+          if(!r.ok)continue;
+          const j=await r.json();
+          const c=t.parse(j);
+          if(c){cityEl.textContent=c;return}
+        }catch(e){}
+      }
+      cityEl.textContent="Perto de você"
+    }
+    detectCity();
+
+    // Sistema de Tracking e Interceptação de Cliques
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializa o sistema de tracking
+      if (window.UTMStore) {
+        const trackingData = window.UTMStore.initialize();
+        
+        // Console de diagnóstico (apenas com UTMs na URL ou debug=1)
+        const hasUtmsInUrl = window.location.search.includes('utm_') || 
+                            window.location.search.includes('src=') ||
+                            window.location.search.includes('fbclid=') ||
+                            window.location.search.includes('debug=1');
+        
+        if (hasUtmsInUrl) {
+          console.log('🎯 STELLA TRACKING - Diagnósticos:');
+          console.log('📊 Resultado getTracking():', window.UTMStore.getTracking());
+          
+          // Mostra cookies _fbp e fbc se existirem
+          const diagnostics = window.UTMStore.getDiagnostics();
+          if (diagnostics.fbp_cookie) {
+            console.log('🍪 Cookie _fbp encontrado:', diagnostics.fbp_cookie);
+          }
+          if (trackingData.fbc) {
+            console.log('🔗 Parâmetro fbc gerado:', trackingData.fbc);
+          }
+          
+          // Mostra URL do botão Privacy com UTMs
+          const privacyUrl = window.UTMStore.appendUtms('/privacy');
+          console.log('🔗 URL Privacy com UTMs:', privacyUrl);
+          
+          // Mostra diagnósticos completos
+          console.log('🔍 Diagnósticos completos:', diagnostics);
+          
+          // Mostra diagnósticos do Meta Pixel
+          if (window.MetaPixel) {
+            console.log('🎯 META PIXEL - Diagnósticos:', window.MetaPixel.getDiagnostics());
+          }
+          
+          // Mostra debug do Telegram (dev)
+          if (window.__tgDebug) {
+            console.log('📱 TELEGRAM - Debug payload:', window.__tgDebug());
+          }
+        }
+        
+        // Estado para prevenir duplos cliques
+        let clicksBlocked = {
+          privacy: false,
+          telegram: false
+        };
+        
+        // Interceptação do botão Privacy
+        const btnPrivacy = document.getElementById('btn-privacy');
+        if (btnPrivacy) {
+          btnPrivacy.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Anti-duplo disparo
+            if (clicksBlocked.privacy) {
+              console.log('⚠️ Clique no Privacy bloqueado - aguarde...');
+              return;
+            }
+            
+            clicksBlocked.privacy = true;
+            btnPrivacy.style.opacity = '0.7';
+            btnPrivacy.style.pointerEvents = 'none';
+            
+            try {
+              // Gera event_id para InitiateCheckout
+              const eventId = window.newEventId('initiatecheckout');
+              
+              // Dispara evento Meta Pixel
+              if (window.MetaPixel) {
+                const result = window.MetaPixel.track('InitiateCheckout', {
+                  content_name: 'privacy-premium',
+                  content_category: 'subscription',
+                  num_items: 1
+                }, eventId);
+                
+                console.log('🎯 InitiateCheckout disparado:', result);
+              }
+              
+              // Salva event_id
+              window.rememberEventId('initiatecheckout', eventId);
+              
+              // Redireciona para /privacy com UTMs preservados
+              const privacyUrl = window.UTMStore.appendUtms('/privacy');
+              console.log('🔗 Redirecionando para Privacy:', privacyUrl);
+              
+              setTimeout(() => {
+                window.location.href = privacyUrl;
+              }, 100); // Pequeno delay para garantir que o evento seja enviado
+              
+            } catch (error) {
+              console.error('❌ Erro no clique Privacy:', error);
+              // Restaura botão em caso de erro
+              setTimeout(() => {
+                clicksBlocked.privacy = false;
+                btnPrivacy.style.opacity = '1';
+                btnPrivacy.style.pointerEvents = 'auto';
+              }, 800);
+            }
+            
+            // Restaura botão após 800ms
+            setTimeout(() => {
+              clicksBlocked.privacy = false;
+              btnPrivacy.style.opacity = '1';
+              btnPrivacy.style.pointerEvents = 'auto';
+            }, 800);
+          });
+        }
+        
+        // Interceptação do botão Telegram
+        const btnTelegram = document.getElementById('btn-telegram');
+        if (btnTelegram) {
+          btnTelegram.addEventListener('click', function(e) {
+            // Anti-duplo disparo
+            if (clicksBlocked.telegram) {
+              console.log('⚠️ Clique no Telegram bloqueado - aguarde...');
+              e.preventDefault();
+              return;
+            }
+            
+            clicksBlocked.telegram = true;
+            btnTelegram.style.opacity = '0.7';
+            
+            try {
+              // Gera event_id curto para Lead (deduplicação perfeita)
+              const eventId = window.shortEventId ? window.shortEventId('lead', 12) : window.newEventId('lead');
+              
+              // Dispara evento Meta Pixel (mantém como estava)
+              if (window.MetaPixel) {
+                const result = window.MetaPixel.track('Lead', {
+                  content_name: 'telegram-bot',
+                  content_category: 'messaging'
+                }, eventId);
+                
+                console.log('🎯 Lead disparado:', result);
+              }
+              
+              // Salva event_id
+              window.rememberEventId('lead', eventId);
+              
+              // NOVO: Constrói deep link do Telegram
+              if (window.TelegramDeepLink) {
+                const tracking = window.UTMStore.getTracking();
+                const payload = window.TelegramDeepLink.buildPayloadSync(tracking, eventId);
+                const deepLink = window.TelegramDeepLink.buildDeepLink(payload);
+                
+                // Seta href dinamicamente
+                e.currentTarget.setAttribute('href', deepLink);
+                
+                // Log para debug (dev)
+                console.log('[TG] payload:', payload, 'href:', deepLink);
+                console.log('[TG] payload length:', payload.length, '/ 64');
+              }
+              
+              console.log('📱 Clique no botão Telegram detectado - Event ID:', eventId);
+              
+            } catch (error) {
+              console.error('❌ Erro no clique Telegram:', error);
+            }
+            
+            // Restaura botão após 800ms
+            setTimeout(() => {
+              clicksBlocked.telegram = false;
+              btnTelegram.style.opacity = '1';
+            }, 800);
+            
+            // Mantém comportamento padrão (href será o deep link) - não previne default
+          });
+        }
+        
+      } else {
+        console.error('❌ UTMStore não foi carregado corretamente');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+      <span class="dot">●</span>
+
+      <span>ONLINE AGORA</span>
+
+      <span class="sep">•</span>
+
+      <span class="loc">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+
+          <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+
+        </svg>
+
+        <span id="city">Monte Sião</span>
+
+      </span>
+
+    </div>
+
+
+
+    <!-- ===== Botões ===== -->
+
+    <a id="btnPrivacy" class="button button--privacy" href="/privacy" rel="noopener noreferrer">
+
+      <span class="icon-wrap"><img class="icon" src="icons/icon-3.png" alt="Privacy"></span>
+
+      <span class="label">Privacy</span><span class="spacer">.</span>
+
+    </a>
+
+
+
+    <a id="btnTelegram" class="button button--telegram" href="/redirect" rel="noopener noreferrer">
+
+      <span class="icon-wrap"><img class="icon" src="icons/icon-2.png" alt="Telegram"></span>
+
+      <span class="label">Telegram Grátis 🔥</span><span class="spacer">.</span>
+
+    </a>
+
+  </div>
+
+
+
+  <div class="footer">Todos os direitos reservados a Mariana Poletto . Qualquer vazamento de imagem é crime — Código Penal (Decreto-Lei 2.848/1940).</div>
+
+
+
+  <script src="../assets/protect.js"></script>
+
+  
+
+  
+
+  <script>
+
+    const cityEl=document.getElementById("city");
+
+    async function detectCity(){
+
+      const tries=[
+
+        {url:"https://ipinfo.io/json",parse:d=>d.city},
+
+        {url:"https://ipapi.co/json/",parse:d=>!d.error?d.city:null},
+
+        {url:"https://geolocation-db.com/json/",parse:d=>d.city&&"Not found"!==d.city?d.city:null}
+
+      ];
+
+      for(const t of tries){
+
+        try{
+
+          const r=await fetch(t.url,{headers:{Accept:"application/json"}});
+
+          if(!r.ok)continue;
+
+          const j=await r.json();
+
+          const c=t.parse(j);
+
+          if(c){cityEl.textContent=c;return}
+
+        }catch(e){}
+
+      }
+
+      cityEl.textContent="Perto de você"
+
+    }
+
+    detectCity();
+
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+      <span class="dot">●</span>
+
+      <span>ONLINE AGORA</span>
+
+      <span class="sep">•</span>
+
+      <span class="loc">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+
+          <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+
+        </svg>
+
+        <span id="city">Monte Sião</span>
+
+      </span>
+
+    </div>
+
+
+
+    <!-- ===== Botões ===== -->
+
+    <a id="btnPrivacy" class="button button--privacy" href="/privacy" rel="noopener noreferrer">
+
+      <span class="icon-wrap"><img class="icon" src="icons/icon-3.png" alt="Privacy"></span>
+
+      <span class="label">Privacy</span><span class="spacer">.</span>
+
+    </a>
+
+
+
+    <a id="btnTelegram" class="button button--telegram" href="/redirect" rel="noopener noreferrer">
+
+      <span class="icon-wrap"><img class="icon" src="icons/icon-2.png" alt="Telegram"></span>
+
+      <span class="label">Telegram Grátis 🔥</span><span class="spacer">.</span>
+
+    </a>
+
+  </div>
+
+
+
+  <div class="footer">Todos os direitos reservados a Mariana Poletto. Qualquer vazamento de imagem é crime — Código Penal (Decreto-Lei 2.848/1940).</div>
+
+
+
+  <script src="../assets/protect.js"></script>
+
+  
+
+  
+
+  <script>
+
+    const cityEl=document.getElementById("city");
+
+    async function detectCity(){
+
+      const tries=[
+
+        {url:"https://ipinfo.io/json",parse:d=>d.city},
+
+        {url:"https://ipapi.co/json/",parse:d=>!d.error?d.city:null},
+
+        {url:"https://geolocation-db.com/json/",parse:d=>d.city&&"Not found"!==d.city?d.city:null}
+
+      ];
+
+      for(const t of tries){
+
+        try{
+
+          const r=await fetch(t.url,{headers:{Accept:"application/json"}});
+
+          if(!r.ok)continue;
+
+          const j=await r.json();
+
+          const c=t.parse(j);
+
+          if(c){cityEl.textContent=c;return}
+
+        }catch(e){}
+
+      }
+
+      cityEl.textContent="Perto de você"
+
+    }
+
+    detectCity();
+
+  </script>
+
+</body>
+
+</html>
+
+

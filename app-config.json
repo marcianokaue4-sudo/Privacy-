@@ -1,0 +1,45 @@
+{
+  "gateway": "pushinpay",
+  "environment": "production",
+  "generateQRCodeOnMobile": false,
+  "syncpay": {
+    "clientId": "708ddc0b-357d-4548-b158-615684caa616",
+    "clientSecret": "c08d40e5-3049-48c9-85c0-fd3cc6ca502c"
+  },
+  "pushinpay": {
+    "token": "46952|4UnkMXPZjw8HsiTOJHAUQWeb9DN87fCIDtYQTNdM672e6914"
+  },
+  "webhook": {
+    "baseUrl": "https://privacy-sync.vercel.app",
+    "secret": "sua-chave-secreta-aqui"
+  },
+  "model": {
+    "name": "Mariana Poletto",
+    "handle": "@marianapoletto.oi",
+    "bio": "Com apenas 18 aninhos fui coroada como a bucetinha mais rosa e o cuzinho mais apertado do 🇧🇷. Aqui você assiste minhas surubas, leitadas violentas, sexo anal sem dó e vídeos quentes que não mostro em lugar nenhum. 😈🔥"
+  },
+  "plans": {
+    "monthly": {
+      "buttonId": "btn-1-mes",
+      "label": "1 mês",
+      "priceLabel": "R$ 19,90",
+      "price": 19.90,
+      "description": "Assinatura mensal"
+    },
+    "quarterly": {
+      "buttonId": "btn-3-meses",
+      "label": "3 meses (30% off)",
+      "priceLabel": "R$ 59,70",
+      "price": 59.70,
+      "description": "Assinatura trimestral"
+    },
+    "semestrial": {
+      "buttonId": "btn-6-meses",
+      "label": "6 meses",
+      "priceLabel": "R$ 119,40 (40% off)",
+      "price": 119.40,
+      "description": "Assinatura semestral"
+    }
+  },
+  "redirectUrl": "https://marianapoletto.com/assinatura-premiada"
+}

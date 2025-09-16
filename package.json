@@ -1,0 +1,49 @@
+{
+  "name": "lepolepo-backend",
+  "version": "1.0.0",
+  "description": "Microserviço backend para webhooks Telegram e Meta Conversions API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "test:watch": "cross-env NODE_ENV=test jest --runInBand --watch",
+    "test:coverage": "cross-env NODE_ENV=test jest --runInBand --coverage",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "telegram",
+    "webhook",
+    "meta-pixel",
+    "conversions-api",
+    "tracking"
+  ],
+  "author": "Sistema de Tracking UTMify + Meta Pixel + Telegram",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
+    "zod": "^3.22.4",
+    "better-sqlite3": "^9.2.2",
+    "express-rate-limit": "^7.1.5",
+    "cors": "^2.8.5",
+    "bullmq": "^4.15.4",
+    "ioredis": "^5.3.2",
+    "prom-client": "^15.1.0",
+    "crypto": "^1.0.1",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "nock": "^13.4.0",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
